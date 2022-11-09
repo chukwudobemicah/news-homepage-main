@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&family=Barlow+Semi+Condensed:wght@500;600&family=Inter:wght@400;700;800&family=Karla:wght@400;700&family=Open+Sans:wght@400;600;700&family=Poppins:ital,wght@0,600;0,700;1,800&family=Raleway:wght@400;700&family=Rubik:wght@400;500;700&display=swap");
+
+/* RESETS*/
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+:root {
+  --Soft-orange: hsl(35, 77%, 62%);
+  --Soft-red: hsl(5, 85%, 63%);
+  --off-white: hsl(36, 100%, 99%);
+  --grayish-blue: --hsl(233, 8%, 79%);
+  --dark-grayish-blue: hsl(236, 13%, 42%);
+  --very-dark-blue: hsl(240, 100%, 5%);
+}
+/* GENERAL STYLES */
+body {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-family: "Karla", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-family: "Rubik", sans-serif;
+  font-size: 0.9375rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+main {
+  width: 92%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 92%;
+  margin-top: 20px;
+}
+.section-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.section-1 h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  max-width: 95%;
+  line-height: 42px;
+}
+.section-2 {
+  background-color: var(--very-dark-blue);
+  color: var(--dark-grayish-blue);
+  padding: 0px 20px;
+  font-weight: 600;
+}
+.section-2 h3 {
+  color: var(--off-white);
+}
+.section-2 h2 {
+  color: var(--Soft-orange);
+  margin-bottom: 25px;
+  font-size: 2rem;
+}
+.section-2 article {
+  margin: 25px 0px;
+  line-height: 30px;
+}
+/* .section-2 .section-2__article-2 {
+  margin: 30px 0px;
+} */
+.section-3 {
+  margin-bottom: 40px;
+}
+.section-3 article {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-bottom: 30px;
+}
+span {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--dark-grayish-blue);
+}
+/* BUTTONS */
+button {
+  display: block;
+  padding: 13px 20px;
+  margin-top: 20px;
+  background-color: var(--Soft-red);
+  border: none;
+  color: #fff;
+  font-weight: 9800;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-size: 0.8999rem;
+  box-shadow: 1px 5px 10px rgba(51, 51, 51, 0.523);
+}
+/* IMAGES */
+.menu-container {
+  position: relative;
+  width: 50px;
+}
+.menu-icon {
+  height: 20px;
+  align-self: center;
+}
+.menu-close {
+  position: absolute;
+  top: 0;
+  display: none;
+  color: transparent;
+}
+.menu-icon:hover .menu-close {
+  display: block;
+}
+.icon {
+  width: 50px;
+  transition: all 0.6s ease-out;
+  animation: button 0.6s ease-in;
+  -webkit-transition: all 0.6s ease-out;
+  -webkit-animation: button 0.6s ease-in;
+}
+.desktop {
+  display: none;
+}
+.section-3 img {
+  width: 100px;
+}
+/* LISTS */
+li {
+  list-style-type: none;
+}
+ul {
+  display: none;
+}
+/* PARAGRAPHS */
+.section-3 article p {
+  max-width: 90%;
+}
+/* HOVER EFFECTS */
+h3:hover {
+  color: var(--Soft-orange);
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+}
+.section-3 h3:hover,
+li:hover {
+  color: var(--Soft-red);
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+}
+button:hover {
+  background-color: var(--very-dark-blue);
+  color: var(--off-white);
+  transition: all 0.6s ease-out;
+  cursor: pointer;
+}
+button:active {
+  background-color: var(--very-dark-blue);
+  color: var(--off-white);
+  transition: all 0.6s ease-out;
+  animation: button 0.6s ease-in;
+  -webkit-transition: all 0.6s ease-out;
+  -webkit-animation: button 0.6s ease-in;
+  cursor: pointer;
+}
+@media screen and (min-width: 1200px) {
+  main,
+  header {
+    width: 90%;
+  }
+  header {
+    margin-top: 60px;
+  }
+  main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .section-1 {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+  }
+  .section-2 {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .section-3 {
+    display: grid;
+    grid-column: span 3;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 30px;
+    gap: 20px;
+  }
+  .section-1__article-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  /* BUTTONS */
+  button {
+    max-width: 180px;
+  }
+  /* HEADINGS */
+  .section-1 h1 {
+    font-size: 3rem;
+    max-width: 100%;
+    line-height: 55px;
+  }
+  /* IMAGES */
+  .menu-icon {
+    display: none;
+  }
+  .desktop,
+  ul {
+    display: block;
+  }
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    grid-column: span 2;
+  }
+
+  /* LISTS */
+  ul {
+    display: flex;
+    gap: 50px;
+  }
+}
+/* ANIMATIONS */
+@keyframes button {
+  1% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes button {
+  1% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
